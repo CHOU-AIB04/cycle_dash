@@ -52,7 +52,7 @@ const Detail = () => {
     <>
       <section className='mt-20 w-[95%]  relative left-1/2 -translate-x-1/2 grid grid-cols-1 md:grid-cols-2 place-items-center gap-2'>
         <div className='w-full self-start flex justify-center'>
-          <img src={`http://localhost/MY_PROJECTS/watches_project/assets/${clicked.Type}/${clicked.Pic}`} alt="pic" className='w-[40%] h-[400px] mix-blend-multiply object-cover'/>
+          <img src={`http://localhost/MY_PROJECTS/watches_project/assets/${clicked.Pic}`} alt="pic" className=' h-[400px] mix-blend-multiply object-cover'/>
         </div>
         <div className='flex flex-col gap-5 items-center md:items-start w-[90%] md:w-full'>
           <nav className='font-bold self-stretch flex flex-col gap-3  relative bef'>
@@ -71,9 +71,9 @@ const Detail = () => {
           {
             parseInt(clicked.qte) !== 0 ?
             <div className='flex items-center flex-col md:flex-row gap-4'>
-            <input type="number" id='qte' className='w-[150px] h-10 rounded-md border border-amber-900 pl-2' defaultValue={1} min={1}/>
-            <button className='w-[250px] h-12 text-sm rounded-md sh bg-white text-amber-900 duration-500 transition-all hover:text-white hover:bg-amber-900 flex items-center justify-center gap-3' onClick={()=>setisvisible(true)}>PourSuiver La Commande</button>
-          </div> : <><p className='text-amber-900 font-bold'>Rupture du stock</p></>
+            <input type="number" id='qte' className='w-[150px] h-10 rounded-md border border-blue-700 pl-2' defaultValue={1} min={1}/>
+            <button className='w-[250px] h-12 text-sm rounded-md sh bg-white text-blue-700 duration-500 transition-all hover:text-white hover:bg-blue-700 flex items-center justify-center gap-3' onClick={()=>setisvisible(true)}>PourSuiver La Commande</button>
+          </div> : <><p className='text-blue-700 font-bold'>Rupture du stock</p></>
           }
          {
           isvisible ? 
@@ -82,7 +82,7 @@ const Detail = () => {
             <TextField name='email' label="Email" type="email" variant="standard" onChange={Change}/>
             <TextField name='carte' label="Carte National" type="text" variant="standard" onChange={Change}/>
             <TextField name='tel' label="Tel" type="tel" variant="standard" onChange={Change}/>
-          <button className='w-[200px] self-center h-12 text-sm rounded-md sh bg-white text-amber-900 duration-500 transition-all hover:text-white hover:bg-amber-900 flex items-center justify-center gap-3'><FaCartShopping /> Shop Now</button>
+          <button className='w-[200px] self-center h-12 text-sm rounded-md sh bg-white text-blue-700 duration-500 transition-all hover:text-white hover:bg-blue-700 flex items-center justify-center gap-3'><FaCartShopping /> Shop Now</button>
         </form>
         : <></>
          }
